@@ -13,8 +13,11 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>1</category>
+      </categories>
       <tags>
-        <tag>测试</tag>
+        <tag>1</tag>
       </tags>
   </entry>
   <entry>
@@ -29,8 +32,11 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;% if (site.tags.length)&#123; %&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;widget-wrap&quot;&gt;</span><br><span class="line">    &lt;h3 class&#x3D;&quot;widget-title&quot;&gt;About&lt;&#x2F;h3&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;widget&quot;&gt;</span><br><span class="line">      邮箱：xxx@xxx.com&lt;br &#x2F;&gt;</span><br><span class="line">      微博：@xxxxx</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 <p>打开themes_config.yml，找到#Sidebar，在最后面添加- about。刷新页面。</p>
 <h2 id="底栏"><a href="#底栏" class="headerlink" title="底栏"></a>底栏</h2><p>打开themes\layout_partial\footer.ejs修改。</p>
-<h2 id="banner"><a href="#banner" class="headerlink" title="-banner-"></a>-banner-</h2><p>打开themes\source\css\images，把banner.jpg换掉。</p>
+<h2 id="banner"><a href="#banner" class="headerlink" title="-banner-"></a>-banner-</h2><p>打开themes\source\css\images，把banner.jpg换掉。    </p>
 ]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
       <tags>
         <tag>日常</tag>
       </tags>
