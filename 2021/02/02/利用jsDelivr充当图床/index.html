@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content=#58b77a>
-  <title>Hexo 入门指南-页面、导航、边栏、底栏 | Outer Space</title>
+  <title>利用jsDelivr充当图床 | Outer Space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="ale007">
   <meta name="keywords" content="">
@@ -86,8 +86,8 @@
   <div class="overlay">
   <div class="page-title">
     <div class="avatar"><a href="/"><img src="/images/1.jpeg"></a></div>
-    <span>2021-01-01</span>
-    <h2>Hexo 入门指南-页面...</h2>
+    <span>2021-02-02</span>
+    <h2>利用jsDelivr充当图床</h2>
     <div class="tags"><i class="fa fa-tag"></i><a class="tag-none-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></div>
     <div class="social-links">
     <a href="https://github.com/ale007cn" target="_blank"><i class="fa fa-github fa-fw"></i></a>
@@ -103,19 +103,24 @@
     <div class="lx-entry padding">
       <div>
         <blockquote>
-<p>本文转自<a target="_blank" rel="noopener" href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/hexo-tutor-4.html">https://wizardforcel.gitbooks.io/markdown-simple-world/content/hexo-tutor-4.html</a></p>
+<p>本文转自<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/76951130">https://zhuanlan.zhihu.com/p/76951130</a></p>
 </blockquote>
-<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><p>命令行键入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
-<p>会在source/about中生成index.html。这个就叫做页面，不在文章列表显示，可以通过<a target="_blank" rel="noopener" href="http://localhost/about">http://localhost/about</a> 浏览。</p>
-<p>页面支持文章的大部分属性，除了分类和标签。</p>
-<h2 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h2><p>打开主题中的设置文件，即themes_config.yml（其中是当前主题的名字，默认为landscape，下同），找到menu:，在列表的末端添加About: 关于。刷新页面，导航栏上就出现了关于链接。</p>
-<h2 id="边栏"><a href="#边栏" class="headerlink" title="边栏"></a>边栏</h2><p>进入themes\layout_widget目录中，创建about.ejs文件，模仿其他文件中的模版，输入以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (site.tags.length)&#123; %&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;widget-wrap&quot;&gt;</span><br><span class="line">    &lt;h3 class&#x3D;&quot;widget-title&quot;&gt;About&lt;&#x2F;h3&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;widget&quot;&gt;</span><br><span class="line">      邮箱：xxx@xxx.com&lt;br &#x2F;&gt;</span><br><span class="line">      微博：@xxxxx</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-<p>打开themes_config.yml，找到#Sidebar，在最后面添加- about。刷新页面。</p>
-<h2 id="底栏"><a href="#底栏" class="headerlink" title="底栏"></a>底栏</h2><p>打开themes\layout_partial\footer.ejs修改。</p>
-<h2 id="banner"><a href="#banner" class="headerlink" title="banner"></a>banner</h2><p>打开themes\source\css\images，把banner.jpg换掉。    </p>
-
+<h2 id="1、新建Github仓库"><a href="#1、新建Github仓库" class="headerlink" title="1、新建Github仓库"></a>1、新建Github仓库</h2><p><img src="https://pic2.zhimg.com/80/v2-beed5cdf1426b847df6b2ef65630b5f9_720w.jpg" alt="img"></p>
+<h2 id="2、克隆Github仓库到本地"><a href="#2、克隆Github仓库到本地" class="headerlink" title="2、克隆Github仓库到本地"></a>2、克隆Github仓库到本地</h2><p>点击 Clone or download，一键复制仓库地址</p>
+<p><img src="https://pic3.zhimg.com/80/v2-fc74654dc02539194264ec7dc08bbb0e_720w.jpg" alt="img"></p>
+<p>在本地目录右键 Git Bash Here，执行以下命令：</p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git  git clone 一键复制的仓库地址</span><br></pre></td></tr></table></figure>
+<h2 id="3、上传资源"><a href="#3、上传资源" class="headerlink" title="3、上传资源"></a>3、上传资源</h2><p>复制需要上传的资源到本地git仓库（注：jsDelivr不支持加载超过20M的资源），在本地git仓库目录下右键 Git Bash Here，执行以下命令：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status                    //查看状态</span><br><span class="line">git add .                     //添加所有文件到暂存区</span><br><span class="line">git commit -m &#x27;第一次提交&#x27;      //把文件提交到仓库</span><br><span class="line">git push                      //推送至远程仓库</span><br></pre></td></tr></table></figure>
+<h2 id="4、发布仓库"><a href="#4、发布仓库" class="headerlink" title="4、发布仓库"></a>4、发布仓库</h2><p>点击release发布</p>
+<p><img src="https://pic4.zhimg.com/80/v2-238a5e82b3c26e62a3a38df35ab15a47_720w.jpg" alt="img"></p>
+<p>自定义发布版本号</p>
+<p><img src="https://pic2.zhimg.com/80/v2-5d3e547378e5c0be1d28c752755d37e1_720w.jpg" alt="img"></p>
+<h2 id="5、通过jsDelivr引用资源"><a href="#5、通过jsDelivr引用资源" class="headerlink" title="5、通过jsDelivr引用资源"></a>5、通过jsDelivr引用资源</h2><p>使用方法：<a href="https://link.zhihu.com/?target=https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/</a>你的用户名/你的仓库名@发布的版本号/文件路径</p>
+<p>例如：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png</span><br><span class="line">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/css/style.css  </span><br><span class="line">https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.3//The%20Pet%20Girl%20of%20Sakurasou.mp4</span><br></pre></td></tr></table></figure>
+<p>注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 加载任何Github发布、提交或分支</span><br><span class="line">https://cdn.jsdelivr.net/gh/user/repo@version/file</span><br><span class="line"></span><br><span class="line">// 加载 jQuery v3.2.1</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js</span><br><span class="line"></span><br><span class="line">// 使用版本范围而不是特定版本</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js   https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js</span><br><span class="line"> </span><br><span class="line">// 完全省略该版本以获取最新版本</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js</span><br><span class="line"> </span><br><span class="line">// 将“.min”添加到任何JS/CSS文件中以获取缩小版本，如果不存在，将为会自动生成</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/src/core.min.js</span><br><span class="line"> </span><br><span class="line">// 在末尾添加 / 以获取资源目录列表</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery/</span><br></pre></td></tr></table></figure>
       </div>
     </div>
   </div>
@@ -123,12 +128,12 @@
 <div class="lx-navigation">
 	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/gh/ale007cn/CDN@0.32/right.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2021/02/02/%E5%88%A9%E7%94%A8jsDelivr%E5%85%85%E5%BD%93%E5%9B%BE%E5%BA%8A/">
+		<a class="copy" href="#">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Next</span>
-						<h3>利用jsDel...</h3>
+						<h3>没有更新的文章</h3>
 					</div>
 				</div>
 			</div>
@@ -136,12 +141,12 @@
 	</div>
         <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/gh/ale007cn/CDN@0.32/left.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2020/12/12/%E5%85%A8%E6%81%AF%E7%8E%AB%E7%91%B0%E7%A2%8E%E7%89%87%E9%80%89%E8%AF%BB/">
+		<a class="copy" href="/2021/01/01/hexo%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Prev</span>
-						<h3>全息玫瑰碎片选读</h3>
+						<h3>Hexo 入门...</h3>
 					</div>
 				</div>
 			</div>
